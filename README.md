@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11+-blue)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)](https://kernel.org/)
-[![owleye](https://img.shields.io/badge/companion-owleye-blueviolet)](https://github.com/t3rtz4/owleye)
+[![owleye](https://img.shields.io/badge/companion-owleye-blueviolet)](https://github.com/chamharoush/owleye)
 
 > Your personal CTF lab builder, powered by KVM/QEMU
 
@@ -33,7 +33,7 @@ Zertana is built for security learners, OSCP candidates, and CTF enthusiasts who
 
 **One-command lab setup.** Run `zertana` and an interactive wizard walks you through the entire process. Within a few minutes you have an attacker box and a vulnerable target both running and connected to each other.
 
-**VulnHub integration.** Zertana works with a local database of VulnHub machines (built by the companion tool [owleye](https://github.com/t3rtz4/owleye)). You search for a target by name using fuzzy matching, and Zertana downloads and configures the image automatically.
+**VulnHub integration.** Zertana works with a local database of VulnHub machines (built by the companion tool [owleye](https://github.com/chamharoush/owleye)). You search for a target by name using fuzzy matching, and Zertana downloads and configures the image automatically.
 
 **Official Kali QEMU image.** Zertana downloads the official Kali Linux image from Offensive Security. You do not need to install Kali manually or find a compatible image yourself. The base image is downloaded once and reused across all your labs.
 
@@ -56,7 +56,7 @@ owleye                        zertana
 ──────────────────────        ──────────────────────────────────────────
 Scrapes VulnHub         ───►  Interactive wizard  ──►  Blueprint
 Saves machines_db.json        │
-github.com/t3rtz4/owleye      ├──► Download + convert target image
+github.com/chamharoush/owleye      ├──► Download + convert target image
                               ├──► Download Kali QEMU image
                               ├──► Create isolated network (10.10.10.0/24)
                               └──► Deploy VMs via libvirt           
@@ -103,7 +103,7 @@ After running `usermod`, you need to log out and back in for the group membershi
 ## Installation
 
 ```bash
-git clone https://github.com/t3rtz4/zertana.git
+git clone https://github.com/chamharoush/zertana.git
 cd zertana
 pip install .
 ```
@@ -116,10 +116,10 @@ This installs the `zertana` command into your Python environment. You can also u
 
 ### Step 1: Build the VulnHub database
 
-Install and run [owleye](https://github.com/t3rtz4/owleye) to populate the machine database that Zertana reads from.
+Install and run [owleye](https://github.com/chamharoush/owleye) to populate the machine database that Zertana reads from.
 
 ```bash
-pip install git+https://github.com/t3rtz4/owleye.git
+pip install git+https://github.com/chamharoush/owleye.git
 owleye
 ```
 
@@ -233,7 +233,7 @@ zertana/
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
-Bug reports and feature requests go in [GitHub Issues](https://github.com/t3rtz4/zertana/issues).
+Bug reports and feature requests go in [GitHub Issues](https://github.com/chamharoush/zertana/issues).
 
 ---
 
